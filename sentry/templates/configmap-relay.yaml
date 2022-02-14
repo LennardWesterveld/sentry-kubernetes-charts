@@ -16,7 +16,7 @@ data:
       {{- if .Values.relay.mode }}
       mode: {{ .Values.relay.mode }}
       {{- end }}
-      upstream: "http://{{ template "sentry.fullname" . }}-web:{{ .Values.service.externalPort }}/"
+      upstream: "http://{{ template "sentry.fullname" . }}-nginx:80/"
       host: 0.0.0.0
       port: {{ template "relay.port" }}
 
